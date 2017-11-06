@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+ <title>Proforma | ICT Designs</title>
+    <link rel="icon" href="i22.jpg">
+    <meta name="Author" content="Joel Grant"/>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+    function validate_form () {
+
+     	var x = document.forms["profoma"]["FirstName"].value;
+     	if (x==null || x=="" ) {
+     		alert("First Name cannot be blank!!");
+     		return false;
+              }
+             var x = document.forms["profoma"]["LastName"].value;
+     	if (x==null || x=="") {
+     		alert("Last Name cannot be blank!!");
+     		return false;
+              }
+			   var x = document.forms["profoma"]["PhoneNumberC"].value;
+     	if (x<999999 || x>9999999 || x==null) {
+     		alert("Please enter a valid phone number!");
+     		return false;
+              }
+			   var x = document.forms["profoma"]["PhoneNumberH"].value;
+     	if (x<999999 || x>9999999 || x==null) {
+     		alert("Please enter a valid Home phone number!");
+     		return false;
+              }
+			   var x = document.forms["profoma"]["PhoneNumberW"].value;
+     	if (x<999999 || x>9999999 || x==null) {
+     		alert("Please enter a valid Work phone number!");
+     		return false;
+              }
+			  var x = document.forms["profoma"]["company"].value;
+     	if (x==null || x=="" ) {
+     		alert("Company Name cannot be blank!!");
+     		return false;
+              }
+			   var x = document.forms["profoma"]["PhoneNumber"].value;
+     	if (x<999999 || x>9999999 || x==null) {
+     		alert("Please enter a valid phone number!");
+     		return false;
+              }
+
+     }
+
+    
+
+     function price(){
+
+document.profoma.est.value = "$5000";
+
+     }
+</script>
+</head>
+<body>
+
+  <!--nav bar-->
+    <table>
+      <tr class="header">
+
+        <td class="hs"></td>
+
+        <td ><a href="members.html"><button  class="button"><span>MEMBERS</span></button></a></td>
+        <td ><a href="proforma.html"><button  class="button"><span>PERFORMA INVOICE</span></button></a></td>
+        <td ><a href="ap.html"><button  class="button"><span>ABOUT</span></button></a></td>
+        
+        <td class="hs"></td>
+
+      </tr>
+    </table>
+
+
+    <table class="space">
+
+    </table>
+
+<form action="demo_form.asp" method="post" enctype="multipart/form-data" name="profoma" onsubmit="return validate_form()">
+<center>
+<h1>Univercity of Technology, Jamaica. <p></h1>
+<h2>Proforma ICT Request for service</h2>
+</center>
+<fieldset><fieldset>
+
+<legend>CUSTOMER DETAILS</legend><center><br>
+Title:&nbsp;&nbsp;&nbsp;<select>
+	<option value="Miss">Miss</option>
+	<option value="Mr.">Mr.</option>
+	<option value="Mrs.">Mrs.</option>
+	<option value="Dr.">Dr.</option>
+	<option value="Prof.">Prof.</option>
+</select><br><br>
+First Name:&nbsp;&nbsp;&nbsp;
+<input type="text" name="FirstName" > <br><br> 
+<label>Last Name:</label>&nbsp;&nbsp;&nbsp; <input type="text", name="LastName" id="lname"><br><br><br>
+Enter your gender:<br> 
+<label>Male</label>&nbsp;&nbsp;<input type="radio", name="gender" checked>
+<label>Female</label>&nbsp;&nbsp;<input type="radio", name="gender"><br><br><br>
+Contact Information:<br><br>
+<label>Cellphone Number:</label>&nbsp;&nbsp;<input type="numeric", name="PhoneNumberC"><br><br>
+<label>Home Number:</label>&nbsp;&nbsp;<input type="numeric", name="PhoneNumberH"  ><br><br>
+<label>Work Number:</label>&nbsp;&nbsp;<input type="numeric", name="PhoneNumberW"><br><br>
+<label>Email Address:</label>&nbsp;&nbsp;<input type="email",<br><br><br>
+</fieldset></fieldset><br>
+<fieldset><fieldset>
+<legend>COMPANY DETAILS</legend><center><br>
+
+<label>Company's Name:</label>&nbsp;&nbsp;&nbsp; <input type="text", name="company" id="comp" required><br><br><br>
+
+<label>Phone Number:</label>&nbsp;&nbsp;<input type="numeric", name="PhoneNumber"required ><br><br><br>
+
+<label>Ext &nbsp; (Optional):</label>&nbsp;&nbsp;<input type="numeric", name="Extension"required ><br><br><br>
+
+<label>Email Address:</label>&nbsp;&nbsp;<input type="text", name="Email"required ><br><br><br>
+
+<label>Country:</label>&nbsp;&nbsp;<input type="text", name="Country"required ><br><br><br>
+
+<label>Parish/State:</label>&nbsp;&nbsp;<input type="text", name="Phone Number"required ><br><br><br>
+</fieldset></fieldset><br>
+<fieldset><fieldset>
+<legend>COMPANY SERVICES</legend><center><br>
+
+What services are you requesting?
+<select onchange="price()" id="service">
+	<option value="blank"  >---------</option>
+	<option value="Graphic Designing">Graphic Designing</option>
+	<option value="IT Consultation">IT Consultation</option>
+	<option value="Web Designing">Web Designing</option>
+	<option value="Tech Support">Tech Support</option>
+	<option value="Web Developing">Web Developing</option>
+	<option value="Software Testing">Software Testing</option>
+	<option value="Software Engineering">Software Engineering</option>
+	<option value="Network Engineering">Network Engineering</option>
+	<option value="Computer Repairs">Computer Repairs</option>
+	<option value="Project Managing">Project Managing</option>
+	<option value="Purchase of a Electronic Device">Purchase of a Electronic Device</option>
+	<option value="Purchase of a Cellphone">Purchase of a Cellphone</option>
+	<option value="Purchase of a Computer">Purchase of a Computer</option>
+	<option value="Purchase of a Computer Part">Purchase of a Computer Part</option>
+	</select>
+</fieldset></fieldset><br>
+
+<fieldset><fieldset>
+<legend>PAYMENT PROCEDURES</legend><center><br>
+
+<label>Estimated Total:</label>&nbsp;&nbsp;<input type="numeric", name="est" placeholder="0"required ><br><br><br>
+
+
+Choose a option for your method of payment?
+<select>
+	<option value="blank">---------</option>
+	<option value="Cash">Cash</option>
+	<option value="Cheque">Cheque</option>
+	<option value="Credit Card">Credit Card</option>
+	<option value="Debit Card">Debit Card</option>
+</select><br><br><br>
+
+Chosse your payment plan below:<br>
+<label>Half Payment</label><input type="radio", name="payment" checked>&nbsp;&nbsp;&nbsp;&nbsp;
+<label>Full Payment</label><input type="radio", name="payment"><br><br>
+
+
+
+<input type="submit" value="Submit" name="submit info">
+</fieldset></fieldset>
+</form>
+
+<!--footer-->
+
+<center>
+<h4 id="small">Telephone:   483-8888 (FLOW) | 898-0000 (DIGICEL) | 
+Email:    <a href="mailto:cpljaltd@gmail.com">cpljaltd@gmail.com</a> </h4>
+
+<h2 id ="small">COPYRIGHT</h2>
+<h2 id ="small">Certified Professional Ltd &copy;</h2>
+</center>
+
+</body>
+</html>
